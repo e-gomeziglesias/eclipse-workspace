@@ -1,0 +1,87 @@
+/*
+ ============================================================================
+ Name        : Clase2-Ejercicio:2-2.c
+ Author      : Gomez Iglesias, Emiliano
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Ejercicio 2-2:
+Ingresar 10 números enteros, distintos de cero. Mostrar:
+Cantidad de pares e impares.
+El menor número ingresado.
+De los pares el mayor número ingresado.
+Suma de los positivos.
+Producto de los negativos.
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	int numero;
+	int numeroValidado;
+	int i;
+	int contadorPares = 0;
+	int contadorImpares = 0;
+	int menorNumero;
+	int mayorNumeroPar;
+	int sumaPositivos;
+	int productoNegativos;
+
+	float promedio;
+
+	printf("Ingreso de datos\n\n");
+
+	for(i=0; i<10; i++)
+	{
+		//ingreso de numero
+		printf("Ingrese el %d° numero: ",i+1);
+		scanf("%d", &numero);
+		//validacion de numero
+		while(numero==0)
+		{
+			printf("El numero ingresado no puede ser cero. Ingrese el %d° numero: ", i+1);
+			scanf("%d", &numero);
+		}
+		//carga de numero validado
+		numeroValidado = numero;
+
+		//cuento los numeros pares
+		if(numeroValidado%2==0)
+		{
+			contadorPares++;
+		}
+
+		//cuento los numeros impares
+		else
+		{
+			contadorImpares++;
+		}
+
+		//busqueda de maximos y minimos
+
+		//busqueda de minimo
+		if(i==0 || numeroValidado < menorNumero)
+		{
+			menorNumero = numeroValidado;
+		}
+
+		//busqueda de maximo par
+		if(i==0 || ((numeroValidado%2==0) && numeroValidado>mayorNumeroPar))
+		{
+			mayorNumeroPar = numeroValidado;
+		}
+
+		//Suma de positivos
+		if(numeroValidado > 0)
+		{
+			sumaPositivos = sumaPositivos + numeroValidado;
+		}
+
+	}
+
+	return EXIT_SUCCESS;
+}

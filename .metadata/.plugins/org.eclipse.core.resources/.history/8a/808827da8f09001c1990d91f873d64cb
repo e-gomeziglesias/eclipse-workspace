@@ -1,0 +1,66 @@
+/*
+ ============================================================================
+ Name        : Clase 3 - Funciones.c
+ Author      : Gomez Iglesias, Emiliano
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+/*Sin modularizar-Escribir todo en una misma funcion:
+ *
+ * (X) Se hace incontrolable
+ * ante la depuración, tenemos que buscar
+ * codigo inalcanzable
+ *
+ * (X)Hay una dependencia del codigo
+ *
+ * (X)Uso innecesario de funcionalidades
+ *
+ * Redundancia en el codigo (escribo una y otra
+ * vez el mismo codigo
+ * */
+
+/*Programar en funciones:
+ *
+ * Se divide el programa en pedacitos, en modulos.
+ *
+ * Para ello, hay que tener muy en claro que hace cada
+ * modulo.
+ *
+ * Instancias a tener en cuenta:
+ *
+ * 1- Declaracion de la funcion (prototipo o firma de la funcion)
+ * 		Doy a conocer la funcion
+ * 		LA INICIAL DE CADA PALABRA DEL NOMBRE DE LA FUNCION VA EN MAYUSCULAS
+ * 		que devuelve --- como se llama --- (que recibe / argumento)
+ * 	ejemplo:
+ */
+
+//1-Prototipo o firma
+int SumarNumeros(int unNumero, int otroNumero); //obs: se finaliza con ;, como cuando declaro una variable
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+
+	return EXIT_SUCCESS;
+}
+
+
+//2- Desarrollo o implementacion de la funcion
+/**/
+int SumarNumeros(int unNumero, int otroNumero) //copio el prototipo, sin ;
+{//1.el set de llaves determina el scope o alcance de la funcion
+	int resultado; //2.esto será lo que devuelve la funcion
+
+	//4.resultado = unNumero + otroNumero;
+
+	return resultado; //3. return retorna la variable / valor que le indico a continuacion
+}
+

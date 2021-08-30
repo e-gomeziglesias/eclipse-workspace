@@ -1,0 +1,40 @@
+/*
+ ============================================================================
+ Name        : Emiliano Gaston Gomez Iglesias
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Ejercicio 2-1: Ingresar 5 números enteros
+ calcular y mostrar el promedio de los números. Probar la
+ aplicación con distintos valores.
+
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	setbuf(stdout,NULL);
+
+    int numero[4];
+    int suma=0;
+
+    float promedio;
+
+    printf("Calcular el promedio\n\n");
+
+    for(int i=0; i<5; i++)
+    {
+        printf("Ingrese el %d°numero: ",i+1);
+        scanf("%d", &numero[i]);
+        suma = suma + numero[i];
+    }
+
+    promedio = (float)suma/5;
+
+    printf("\n\nEl promedio es el %.2f ", promedio);
+
+	return EXIT_SUCCESS;
+}

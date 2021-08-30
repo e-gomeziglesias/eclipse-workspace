@@ -1,0 +1,213 @@
+/*
+ ============================================================================
+ Name        : Gomez Iglesias, Emiliano
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description :
+
+Ejercicio 2-3:
+Debemos alquilar el servicio de transporte para llegar a Mar del Plata
+ con un grupo de personas, de cada persona debemos obtener los
+ siguientes datos:
+	número de cliente,
+	estado civil ('s' para soltero", 'c' para casado o 'v' viudo),
+	edad( solo mayores de edad, más de 17),
+	temperatura corporal (validar por favor)
+	sexo ('f' para femenino, 'm' para masculino, 'o' para no binario).
+NOTA: El precio por pasajero es de $600.
+Se debe informar (solo si corresponde):
+a) La cantidad de personas con estado "viudo" de más de 60 años.
+b) el número de cliente y edad de la mujer soltera más joven.
+c) cuánto sale el viaje total sin descuento.
+d) si hay más del 50% de los pasajeros que tiene más de 60 años , el precio final tiene un descuento del 25%, que solo mostramos si corresponde.
+
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#define PRECIO 600
+#define DESCUENTO 25
+
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	int numeroCliente;
+	char estadoCivil;
+	char estadoCivilValidado;
+	int edad;
+	int edadValidada;
+	float temperatura;
+	float temperaturaValidada;
+	char sexo;
+	char sexoValidado;
+	int contadorPasajeros=0;
+	int contador60Mas=0;
+	int contadorViudos60Mas=0;
+	int numeroClienteMujerJoven=-1;
+	int edadMujerJoven;
+	float porcentajeMayores60;
+	float precioViajeTotal;
+	float precioViajeDescuento;
+	char respuesta='s';
+
+	printf("Viaje a Mar del Plata\n\n");
+	printf("Ingreso de datos:\n\n");
+	do
+	{
+		//--Numero de cliente
+		//---Carga de numero de cliente
+		printf("Ingrese el numero de cliente: ");
+		scanf("%d", &numeroCliente);
+
+		//---Estado Civil
+
+		//Carga de estado civil
+		printf("\nIngrese el estado civil (c=casado / s=soltero / v=viudo): ");
+		fflush(stdin);
+		scanf("%c", &estadoCivil);
+		estadoCivil = tolower(estadoCivil);
+
+		//validacion de estado civil
+		while(estadoCivil != 'c' && estadoCivil != 's' && estadoCivil != 'v')
+		{
+			printf("\nEl estado civil ingresado es invalido. Ingrese el estado civil (c=casado / s=soltero / v=viudo): ");
+			fflush(stdin);
+			scanf("%c", &estadoCivil);
+			estadoCivil = tolower(estadoCivil);
+		}
+		//---carga de estado civil validado
+		estadoCivilValidado = estadoCivil;
+
+		//---Edad
+
+		//Carga de edad
+		printf("\nIngrese la edad (sólo mayores de edad): ");
+		fflush(stdin);
+		scanf("%d", &edad);
+		//validacion de edad
+		while(edad<18 || edad>100)
+		{
+			printf("\nLa edad ingresada es invalida. Ingrese la edad (sólo mayores de edad): ");
+			scanf("%d", &edad);
+		}
+		//carga de edad validada
+		edadValidada = edad;
+
+		//---Temperatura
+
+		//carga de temperatura
+		printf("\nIngrese temperatura: ");
+		scanf("%f", &temperatura);
+
+		//validacion temperatura
+		while(temperatura<35 || temperatura>37)
+		{
+			printf("\nLa temperatura ingresada es invalida. Reingrese la temperatura: ");
+			scanf("%f", &temperatura);
+		}
+
+		//carga temperatura validada
+		temperaturaValidada = temperatura;
+
+		//---Sexo
+
+		//carga de sexo
+		printf("\nIngrese sexo (f=femenino / m=masculino / o=no binario: ");
+		fflush(stdin);
+		scanf("%c", &sexo);
+		sexo = tolower(sexo);
+
+		//validacion de sexo
+		while(sexo!= 'f' && sexo != 'm' && sexo!= 'o')
+		{
+			printf("\nEl sexo ingresado es invalido.Reingrese sexo (f=femenino / m=masculino / o=no binario: ");
+		}
+
+		//carga de sexo validado
+		sexoValidado = sexo;
+
+		//Conteo
+
+		//Cantidad de pasajeros
+		contadorPasajeros++;
+
+		//Cantidad de viudos mayores de 60 años
+		if(edadValidada >60)
+		{
+			contador60Mas++;
+			if(estadoCivilValidado == 'v')
+			{
+				contadorViudos60Mas++;
+			}
+		}
+
+		//Numero cliente y edad mujer mas joven
+		if(sexoValidado == 'f' && estadoCivilValidado == 's')
+		if((edadMujerJoven == -1) || (edadValidada < edadMujerJoven))
+		{
+			numeroClienteMujerJoven = numeroCliente;
+			edadMujerJoven = edadValidada;
+		}
+
+		//Muestra por pantalla de los datos del pasajero
+		printf("\nDatos Ingresados\n\n");
+		printf("\nNumero de cliente: %d", numeroCliente);
+		printf("\nEstado Civil: %c", estadoCivilValidado);
+		printf("\nEdad: %d", edadValidada);
+		printf("\nTemperatura: %.2f°C", temperaturaValidada);
+		printf("\nSexo: %c", sexoValidado);
+
+	}while (respuesta!='n');
+
+	//Calculos auxiliares
+
+	//Porcentaje de pasajeros mayores a 60 años
+	porcentajeMayores60 = (float)contador60Mas*100/contadorPasajeros;
+
+	//Precio del viaje sin descuento
+	precioViajeTotal = contadorPasajeros*PRECIO;
+
+	//Informes por pantalla
+
+	printf("\nINFORMES\n\n");
+
+	//a.Cantidad de pasajeros viudos de mas de 60 años
+	if(contadorViudos60Mas != 0)
+	{
+		printf("	a.Cantidad de pasajeros viudos de mas de 60 años: %d\n", contadorViudos60Mas);
+	}
+	else
+	{
+		printf("	a.No hay pasajeros viudos de mas de 60 años.\n");
+	}
+
+	//b.Numero cliente y edad mujer soltera mas joven
+	if(edadMujerJoven != -1)
+	{
+		printf("	b.La mujer soltera mas joven es la cliente #%d y tiene %d años.\n", numeroClienteMujerJoven, edadMujerJoven);
+	}
+	else
+	{
+		printf("	b.No se ingresaron datos de una mujer soltera.\n");
+	}
+
+	//c) cuánto sale el viaje total sin descuento.
+	printf("Precio total del viaje (sin descuentos): $%.2f\n", precioViajeTotal);
+
+	//d) si hay más del 50% de los pasajeros que tiene más de 60 años , el precio final tiene un descuento del 25%, que solo mostramos si corresponde.
+	if(porcentajeMayores60 > 50)
+	{
+		precioViajeDescuento = precioViajeTotal * (1-DESCUENTO);
+		printf("d. Un %.2f  de los pasajeros tiene mas de 60 años. Se aplica un descuento del 25 y el precio final del viaje es $ %.2f \n", porcentajeMayores60, precioViajeDescuento);
+	}
+	else
+	{
+		printf("d. Menos de la mitad de los pasajeros son mayores de 60 años. No se aplica descuento.\n");
+	}
+
+	return EXIT_SUCCESS;
+}

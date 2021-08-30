@@ -1,0 +1,7 @@
+10:40:22 **** Incremental Build of configuration Debug for project Clase 3 - Funciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase 3 - Funciones.o" "..\\src\\Clase 3 - Funciones.c" 
+gcc -o "Clase 3 - Funciones.exe" "src\\Clase 3 - Funciones.o" 
+
+10:40:22 Build Finished. 0 errors, 0 warnings. (took 380ms)
+
