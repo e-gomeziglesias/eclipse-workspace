@@ -188,7 +188,7 @@
                 </children>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_C9akXwmmEey7qOoNBH1yRw" containerData="6839" selectedElement="_C9akbAmmEey7qOoNBH1yRw">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_C9akXwmmEey7qOoNBH1yRw" containerData="6839" selectedElement="_C9akYAmmEey7qOoNBH1yRw">
               <children xsi:type="basic:PartSashContainer" xmi:id="_C9akYAmmEey7qOoNBH1yRw" containerData="6348" selectedElement="_C9akYQmmEey7qOoNBH1yRw" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_C9akYQmmEey7qOoNBH1yRw" elementId="org.eclipse.ui.editorss" containerData="9000" ref="_C9bMCAmmEey7qOoNBH1yRw"/>
                 <children xsi:type="basic:PartStack" xmi:id="_C9akYgmmEey7qOoNBH1yRw" elementId="org.eclipse.debug.internal.ui.OutlineFolderView" containerData="1000" selectedElement="_C9akYwmmEey7qOoNBH1yRw">
@@ -322,9 +322,15 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_C9bMCAmmEey7qOoNBH1yRw" elementId="org.eclipse.ui.editorss" selectedElement="_C9bMCQmmEey7qOoNBH1yRw">
-      <children xsi:type="basic:PartStack" xmi:id="_C9bMCQmmEey7qOoNBH1yRw" elementId="org.eclipse.e4.primaryDataStack">
+      <children xsi:type="basic:PartStack" xmi:id="_C9bMCQmmEey7qOoNBH1yRw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_YWq7oAm4EeyDJbk9cW9Uzw">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
+        <children xsi:type="basic:Part" xmi:id="_YWq7oAm4EeyDJbk9cW9Uzw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Clase 3 - Ejercicio 3-3 Mejorado.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Clase 3 - Ejercicio 3-3 Mejorado.c&quot; partName=&quot;Clase 3 - Ejercicio 3-3 Mejorado.c&quot; title=&quot;Clase 3 - Ejercicio 3-3 Mejorado.c&quot; tooltip=&quot;Clase 3 - Ejercicio 3-3 Mejorado/src/Clase 3 - Ejercicio 3-3 Mejorado.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Clase 3 - Ejercicio 3-3 Mejorado/src/Clase 3 - Ejercicio 3-3 Mejorado.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;580&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>removeOnHide</tags>
+          <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+        </children>
       </children>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_C9bMCgmmEey7qOoNBH1yRw" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.png" tooltip="" closeable="true">
@@ -529,7 +535,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_C9bMyQmmEey7qOoNBH1yRw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_IzFHYAm3EeymwtJZV2IUhQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_C9dnlQmmEey7qOoNBH1yRw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_bikP4Am4EeyXH7ldfxfUXA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_C9dnlQmmEey7qOoNBH1yRw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_C9bM1wmmEey7qOoNBH1yRw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -551,7 +557,7 @@
       <children xsi:type="menu:ToolBar" xmi:id="_C9bNJAmmEey7qOoNBH1yRw" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_C9bNKQmmEey7qOoNBH1yRw" elementId="org.eclipse.ui.edit.text.actionSet.presentation" visible="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_C9bNKQmmEey7qOoNBH1yRw" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_C9bNLgmmEey7qOoNBH1yRw" elementId="group.nav" toBeRendered="false">
@@ -560,7 +566,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_C9bNMAmmEey7qOoNBH1yRw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_IzIxwAm3EeymwtJZV2IUhQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_C9dD5gmmEey7qOoNBH1yRw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_bimsIAm4EeyXH7ldfxfUXA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_C9dD5gmmEey7qOoNBH1yRw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_C9bNOwmmEey7qOoNBH1yRw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
