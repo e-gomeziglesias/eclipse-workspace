@@ -1,13 +1,14 @@
-15:31:08 **** Rebuild of configuration Debug for project Clase 3 - Ejercicio 3-5 ****
+15:00:53 **** Incremental Build of configuration Debug for project Clase 4 - Ejercicio 4-2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase 3 - Ejercicio 3-5.o" "..\\src\\Clase 3 - Ejercicio 3-5.c" 
-gcc -o "Clase 3 - Ejercicio 3-5.exe" "src\\Clase 3 - Ejercicio 3-5.o" 
-15:31:14 **** Incremental Build of configuration Debug for project Clase 3 - Ejercicio 3-5 ****
+gcc -o "Clase 4 - Ejercicio 4-2.exe" "src\\Clase 4 - Ejercicio 4-2.o" "src\\Conversor_Temperaturas.o" "src\\Input.o" 
+Info: Nothing to build for Clase 4 - Ejercicio 4-2
+Info: Nothing to build for Clase 4 - Ejercicio 4-2
+15:03:08 **** Incremental Build of configuration Debug for project Clase 4 - Ejercicio 4-2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase 3 - Ejercicio 3-5.o" "..\\src\\Clase 3 - Ejercicio 3-5.c" 
-gcc -o "Clase 3 - Ejercicio 3-5.exe" "src\\Clase 3 - Ejercicio 3-5.o" 
-15:33:12 **** Incremental Build of configuration Debug for project Clase 3 - Ejercicio 3-5 ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase 4 - Ejercicio 4-2.o" "..\\src\\Clase 4 - Ejercicio 4-2.c" 
+gcc -o "Clase 4 - Ejercicio 4-2.exe" "src\\Clase 4 - Ejercicio 4-2.o" "src\\Conversor_Temperaturas.o" "src\\Input.o" 
+c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase 4 - Ejercicio 4-2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+15:03:16 **** Incremental Build of configuration Debug for project Clase 4 - Ejercicio 4-2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase 3 - Ejercicio 3-5.o" "..\\src\\Clase 3 - Ejercicio 3-5.c" 
-gcc -o "Clase 3 - Ejercicio 3-5.exe" "src\\Clase 3 - Ejercicio 3-5.o" 
-Info: Nothing to build for Clase 3 - Ejercicio 3-5
+gcc -o "Clase 4 - Ejercicio 4-2.exe" "src\\Clase 4 - Ejercicio 4-2.o" "src\\Conversor_Temperaturas.o" "src\\Input.o" 
