@@ -1,0 +1,48 @@
+/*
+ ============================================================================
+ Name        : Clase 4 - Ejercicio 4-2.c
+ Author      : Gomez Iglesias, Emiliano
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Ejercicio 4-2:
+Realizar un programa que permita la carga de
+ temperaturas en celsius y fahrenheit ,
+  validando que las temperaturas ingresadas
+  estén entre el punto de congelación y
+  ebullición del agua para cada tipo de escala.
+Las validaciones se hacen en una biblioteca.
+Las funciones de transformación de fahrenheit a
+ celsius y de celsius a fahrenheit se hacen en
+ otra biblioteca.
+
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Input.h"
+#include "Conversor_Temperaturas.h"
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int opcion;
+	float temperatura;
+	float temperaturaConvertida;
+
+	printf("CONVERTIDOR DE TEMPERATURAS\n\n");
+	opcion = CargarEntero("Ingrese 1 para pasar de  Celsius a Fahrenheit.\nIngrese 2 para pasar de Fahrenheit a Celsius.\nOpcion: ","La opcion ingresada es INVALIDA.\n\nIngrese 1 para pasar de  Celsius a Fahrenheit.\nIngrese 2 para pasar de Fahrenheit a Celsius.\nOpcion: ", 1, 2);
+	printf("\n");
+	if(opcion == 1)
+	{
+		temperaturaConvertida = ConvertirCelsiusAFahrenheit(temperatura);
+		printf("%.2f °C = %.2f °F", temperatura, temperaturaConvertida);
+	}
+	else
+	{
+		temperaturaConvertida = ConvertirFahrenheitACelsius(temperatura);
+		printf("%.2f °F = %.2f °C", temperatura, temperaturaConvertida);
+	}
+
+	return EXIT_SUCCESS;
+}

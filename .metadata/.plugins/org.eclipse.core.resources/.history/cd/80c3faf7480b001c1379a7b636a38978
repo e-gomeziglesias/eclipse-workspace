@@ -1,0 +1,23 @@
+/*
+ * Validacion_Temperaturas.h
+ *
+ *  Created on: 1 sep. 2021
+ *      Author: Gomez Iglesias, Emiliano
+ */
+
+#ifndef VALIDACION_TEMPERATURAS_H_
+#define VALIDACION_TEMPERATURAS_H_
+
+
+
+#endif /* VALIDACION_TEMPERATURAS_H_ */
+
+/// @fn float CargarFlotante(char[], char[], float, float)
+/// @brief Permite cargar un numero flotante, validando que se encuentre dentro de un rango
+///
+/// @param mensaje Mensaje para comenzar el ingreso de datos.
+/// @param mensajeError Mensaje para informar el ingreso incorrecto de datos y pedir el reingreso.
+/// @param minimo cota inferior del rango que puede tomar el numero ingresado.
+/// @param maximo cota superior del rango que puede tomar el numero ingresado.
+/// @return devuelve el numero flotante validado.
+float CargarFlotante (char mensaje[], char mensajeError[], float minimo, float maximo);

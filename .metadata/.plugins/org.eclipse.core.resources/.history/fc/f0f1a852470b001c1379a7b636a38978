@@ -1,0 +1,10 @@
+/*
+ * Validacion_Temperaturas.c
+ *
+ *  Created on: 1 sep. 2021
+ *      Author: Gomez Iglesias, Emiliano
+ */
+
+#include "Validacion_Temperaturas.h"
+
+float CargarTemperatura(char mensaje[], char mensajeError[], float minimo, float maximo);

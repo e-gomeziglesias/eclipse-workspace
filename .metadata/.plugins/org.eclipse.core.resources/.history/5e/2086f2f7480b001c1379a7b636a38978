@@ -1,0 +1,24 @@
+/*
+ * Validacion_Temperaturas.c
+ *
+ *  Created on: 1 sep. 2021
+ *      Author: Gomez Iglesias, Emiliano
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include "Validacion_Temperaturas.h"
+
+float CargarFlotante(char mensaje[], char mensajeError[], float minimo, float maximo)
+{
+	float auxFlotante;
+	float flotante;
+	printf("\n%s",mensaje);
+	scanf("%f", &auxFlotante);
+	while(!(auxFlotante>=minimo && auxFlotante <= maximo))
+	{
+		printf("\n%s", mensajeError);
+		scanf("%f", &auxFlotante);
+	}
+	flotante = auxFlotante;
+	return flotante;
+}

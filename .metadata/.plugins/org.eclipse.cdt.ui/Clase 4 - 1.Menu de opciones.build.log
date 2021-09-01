@@ -1,0 +1,7 @@
+12:11:33 **** Rebuild of configuration Debug for project Clase 4 - 1.Menu de opciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase 4 - 1.Menu de opciones.o" "..\\src\\Clase 4 - 1.Menu de opciones.c" 
+gcc -o "Clase 4 - 1.Menu de opciones.exe" "src\\Clase 4 - 1.Menu de opciones.o" 
+
+12:11:34 Build Finished. 0 errors, 0 warnings. (took 527ms)
+
