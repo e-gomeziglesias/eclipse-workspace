@@ -1,14 +1,4 @@
-15:00:53 **** Incremental Build of configuration Debug for project Clase 4 - Ejercicio 4-2 ****
+17:39:26 **** Incremental Build of configuration Debug for project TP_1 ****
 Info: Internal Builder is used for build
-gcc -o "Clase 4 - Ejercicio 4-2.exe" "src\\Clase 4 - Ejercicio 4-2.o" "src\\Conversor_Temperaturas.o" "src\\Input.o" 
-Info: Nothing to build for Clase 4 - Ejercicio 4-2
-Info: Nothing to build for Clase 4 - Ejercicio 4-2
-15:03:08 **** Incremental Build of configuration Debug for project Clase 4 - Ejercicio 4-2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase 4 - Ejercicio 4-2.o" "..\\src\\Clase 4 - Ejercicio 4-2.c" 
-gcc -o "Clase 4 - Ejercicio 4-2.exe" "src\\Clase 4 - Ejercicio 4-2.o" "src\\Conversor_Temperaturas.o" "src\\Input.o" 
-c:/mingw/bin/../lib/gcc/mingw32/6.3.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase 4 - Ejercicio 4-2.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-15:03:16 **** Incremental Build of configuration Debug for project Clase 4 - Ejercicio 4-2 ****
-Info: Internal Builder is used for build
-gcc -o "Clase 4 - Ejercicio 4-2.exe" "src\\Clase 4 - Ejercicio 4-2.o" "src\\Conversor_Temperaturas.o" "src\\Input.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1.o" "..\\src\\TP_1.c" 
+gcc -o TP_1.exe "src\\Aritmeticas.o" "src\\TP_1.o" 
